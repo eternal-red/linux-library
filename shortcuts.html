@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Shortcuts</title>
+</head>
+
+<body class="theme">
+  <h1>Shortcuts</h1>
+  <div class="app_container">
+    <div class="commandtitle"><h2>Terminal Hotkeys </h2> </div>
+    <div class="command">  
+      ctrl+a                    Set cursor to start of line<br />
+      ctrl+e                    Set cursor to end of line<br />
+      ctrl+u                    Delete from start until cursor<br />
+      ctrl+k                    Delete from cursor until end<br />
+      ctrl+r                    Search history<br />
+      ctrl+c 		   Exit out of a CL script (for most scripts)<br /></div>
+
+    <div class="commandtitle"><h2>Special Characters</h2></div>
+    <div class="command">
+      pipe (|): allows you to perform two logical linux lines  in one physical line<br />
+      >: redirect the output to this file<br />
+      ~: shorthand for path to your home directory<br />
+      whatis [command]- simple summary of a command<br />
+      man [command]- detailed description of the command<br /></div>
+
+    <div class="commandtitle"><h2>Search</h2></div>
+    <div class="command">
+      <strong>grep [switches] [search input] [file or folder]</strong><br />
+      description: locate strings in a file<br />
+      <strong>switches</strong><br />
+      -i: ignore case<br />
+      -r: allows you to search a directory<br />
+      -n display line that is greped<br />
+      -w: only returns whole word (where a whole word matches the search input)<br />
+      -v: inverted search, prints all lines that don’t include the search input<br />
+      -A[# of lines]: number of additional lines printed after match term<br />
+      -B[#number of lines]: before<br />
+      <strong>repetition expressions</strong><br />
+            ?   The preceding item is optional and matched at most once.<br />
+            *      The preceding item will be matched zero or more times.<br />
+            +      The preceding item will be matched one or more times.<br />
+            {n}    The preceding item is matched exactly n times.<br />
+            {n,}   The preceding item is matched n or more times.<br />
+            {,m}   The preceding item is matched at most m times.  This is a GNU extension.<br />
+            {n,m}  The preceding item is matched at least n times, but not more than m times.<br />
+      examples:<br />
+      grep -i “ca.” file.txt<br />
+      grep -i “pyt?h?o?n?” file.txt<br />
+      would find python and py<br />
+      notes<br />
+      if you actually want to grep for a repetition expression, you have to use a backspace before it<br />
+      ex: grep -r “hello/?” file.txt<br /></div>
+
+    
+      <div class="command"> 
+        <strong>find [directory] [switches] –name [search term] </strong><br />
+        description: locate files or directories on a device<br />
+        <strong>switches</strong><br />
+        -type [d/f]: specify if you’re looking for either directories or files<br />
+        -iname: makes search case insensitive<br />
+        -user [username]: specify owner of the file<br />
+        -size [subswitch: specify size of the file<br />
+          [-a number]: matches values less than number<br />
+          [a number]: matches values exactly the size of number<br />
+          [+a number]: matches values greater than number<br />
+          [c]: suffix for bytes<br />
+          [k]: suffix for kilobytes<br />
+          [m]: suffix for megabytes<br />
+            ex: [-28m]<br />
+        -perm [sub switches]: specifies permissions of the file<br />
+          [###]: permissions in octal form<br />
+            ex: [644]<br />
+          [u=rw]: permissions in symbolic form<br />
+          [-]: prefix that will return files that match at least the perms specified<br />
+        [/]: prefix that will return files that match any of the perms specified<br />
+          ex: [/666]<br />
+        -time related searches<br />
+          [min]: time will be specified in  minutes<br />
+          [time]: time will be specified in days<br />
+          [a]: when a file was last accessed<br />
+          [m]: when a file was last modified<br />
+          [c]: when the status of a file last changed<br />
+          -the time value is specified similar to the size switch<br />
+            ex: -mtime +28<br /></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+  </div>
+</body>
+</html>
