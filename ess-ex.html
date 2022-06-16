@@ -71,7 +71,8 @@
 
     <div class="command">
       <strong>mkdir [name]</strong><br />
-      creates a new directory<br />
+      First I used [cmd] ls -la to show all the files that currently exist. Then we use [cmd] mkdir direc to create a new directory called direc<br />
+      We can see this new directory by listed all files and directories again with [cmd] ls -la. <br />
       example: <br />
       [cmd] mkdir direc <br />
       output: <br />
@@ -82,6 +83,7 @@
       The file will be permanantly removed. It is not like moving a file to the trash can on Windows. <br />
       However it is possible to recover the file with forensic data recovery software. <br />
       example: <br />
+      First, I listed the contents of our directory with [cmd] ls which are file.txt and file2.txt. Then I used [cmd] rm file.txt to permanatly delete file.txt from the server. Using [cmd] ls again we can see file.txt is gone.<br />
       [cmd] rm file.txt
       output: <br />
       &emsp;&emsp;<img src="assets/pics/rm.png" /></div>
@@ -90,16 +92,10 @@
       <strong>touch [name]</strong><br />
       create a empty text file<br />
       example: <br />
+      Using [cmd] ls -la we list all contents that are currently in the directory. Then we use [cmd] touch file_t.txt to create an empty text file called file_t.txt. We use [cmd] ls -la once again to confirm the creation of this file. <br />
       [cmd] touch file_t.txt <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/touch.png" /></div>
-
-    <div class="command">
-      <strong>mv [filename] [full path of new location] </strong><br />
-      This command can be used to move a file/directory to another directory or rename a file/directory. <br />
-      [cmd] mv file2.txt  file3.txt<br />
-      output: <br />
-      &emsp;&emsp;<img src="assets/pics/mv.png" /></div>
 
     <div class="command">
       <strong>cp [filename] [full path of new location]</strong><br />
@@ -108,7 +104,8 @@
 
     <div class="command">
       <strong>cat [file1] [file2] [file…]</strong><br />
-      displays file’s content, can display multiple files in 1 output<br />
+      <b>display the content of a file</b>
+      <b>combine the content of two or more files</b>
       cat [file1] [file2] > [file3]    combine multiple files<br /></div>
 
     <div class="command">
@@ -117,18 +114,36 @@
       example:  <br />
       [cmd] echo "this line will show up in terminal"   <br />
       output: <br />
-      [cmd] echo "this line will show up in the file" <br />
+      &emsp;&emsp;<img src="assets/pics/echo_t.png" />
+      We first open file2 to show its contents [cmd] file2.txt. Now we add our string to it [cmd] echo "this line will show up in the file">>file2.txt <br />
+      [cmd] echo "this line will show up in the file" >>file2.txt <br />
       output: <br />
-      </div>
+      &emsp;&emsp;<img src="assets/pics/echo_file.png" /></div>
+
+    <div class="command">
+      <strong>mv [filename] [full path of new location] </strong><br />
+      This command can be used to move a file/directory to another directory or rename a file/directory. <br />
+      examples: <br />
+      <b>We will rename a file</b><br />
+      First we do [cmd] cat file2.txt to show the contents of the file. Then we do [cmd] mv file2.txt file3.txt to actually rename it. Now we use [cmd] cat file3.txt to make sure the content is not changed. <br />
+      Since the content is the same, all we have done is rename file2.txt to file3.txt. <br />
+      [cmd] mv file2.txt  file3.txt<br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/mv.png" /><br />
+      <b>We will move a file to another directory</b>
+      First we do [cmd] cat file2.txt to show its contents. Then we do [cmd] mv file2.txt /home/examples/file2.txt to move it to another directory. Now we go into that directory to confirm it is there. <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/mv.png" /></div>
     
     <div class="command">
       <strong>clear</strong><br />
       clear the terminal screen<br />
       example: <br />
+      We first run a few commands to fill the screen [cmd] ls [cmd] pwd [cmd] cd .. [cmd] pwd. Now we use [cmd] to empty the screen.<br />
       [cmd] clear <br />
       output: <br />
-    </div>
-      
+      &emsp;&emsp;<img src="assets/pics/b_clear.png" />
+      &emsp;&emsp;<img src="assets/pics/a_clear.png" /></div>      
 
     <div class="commandtitle"><h2> File and Directory Permissions</h2></div> 
     <div class="command">
@@ -181,7 +196,11 @@
     <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
     <div class="command">
       <strong>whoami</strong><br />
-      displays the name of the current user<br /></div>
+      displays the name of the current user<br />
+      example: <br />
+      [cmd] whoami <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/whoami.png" /></div>
 
     <div class="command">
       <strong>hostname</strong><br />
@@ -190,21 +209,16 @@
 
     <div class="command">
       <strong>id</strong><br />
-      displays the user and group names and ids<br /></div>
-
-    <div class="command">
-      <strong>group</strong><br />
-      lists groups the current user is in<br /></div>
+      displays the user and group names and ids<br />
+      example: <br />
+      [cmd] id <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/id.png" /></div>
 
     <div class="command">
       <strong>lsb_release -a</strong><br />
       print information about the linux distribution of the system<br /></div>   
     
-    <div class="command">
-      <strong>lscpu</strong><br />
-      gives information on the cpu<br /></div>
-
-
     <div class="command">
       <strong>lscpu</strong><br />
       gives information on the cpu<br /></div>
