@@ -10,7 +10,7 @@ default background color dark grey to fit app theme
     color: #fffdfd;
     padding: 0;
     margin: 0;
-    background: rgb(167, 205, 223);
+    background: rgb(124, 169, 189);
 }
 
 
@@ -60,23 +60,27 @@ centered text and made white
 
 
 /*
+cross-site link
+*/
+
+/*
 Your Styling
 */
 
 .command {
     flex-grow: 1;
     padding: 10px;
-    background: rgb(201, 201, 201);
+    background: rgb(173, 173, 173);
     margin: 7px;
     margin-bottom: 30px;
-    border: 3px solid white;
+    border: 3px solid rgb(204, 204, 204);
     border-radius: 15px;
 }
 
 .commandtitle {
     width: 100%;
     padding: 10px;
-    background: rgb(167, 205, 223);
+    background: rgb(124, 169, 189);
     border: 1px white;
 }
 
@@ -90,6 +94,17 @@ Centered and add spacing for looks
     margin: 10px;
 }
 
-img {
+.menu_icons {
     width: 50px;
+    height: auto;
 }
+
+/*
+other images
+*/
+
+.img {
+    width: 90%;
+    height: auto;
+  }
+  

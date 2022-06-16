@@ -11,10 +11,35 @@
 <body class="theme">
     <h1>Networking</h1>
     <div class="app_container">
-      <div class="commandtitle"><h2> File Management </h2> </div>
+      <div class="commandtitle"><h2> Routing </h2> </div>
       <div class="command">  
-        <strong>pwd</strong><br />
-        print current working directory<br /></div>
+        <strong>ifconfig</strong><br />
+        prints all network interfaces<br /></div>
+    <div class="command">  
+        <strong>arp</strong><br />
+        find devices on your subnet<br />
+        <u>switches</u><br />
+        -a: list all devices on subnet (stored in the arp table)<br />
+        -d [ip]: delete a specified device from arp table<br /></div>
+    <div class="command">  
+        <strong>route</strong><br />
+        print the routing table for your device<br /></div>
+    <div class="command">  
+        <strong>ip route add [subnet] via [router ip]</strong><br />
+        connects to other subnets in your network and allows you to connect with them<br /></div>    
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </body>
 </html>

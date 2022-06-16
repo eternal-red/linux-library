@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>System Commands</title>
+</head>
+
+<body class="theme">
+  <h1>Essential Commands</h1>
+  <h2>Want a more detailed walkthrough with examples and images?
+    <a href="ess-ex.html" >
+      <p>Go Here</p>
+    </a>
+  </h2> 
+  <div class="app_container">
+    <div class="commandtitle"><h2> File Navigation and Management </h2> </div>
+    <div class="command">  
+      <strong>pwd</strong><br />
+      print current working directory<br />  
+      <input type="checkbox" /></div>
+
+    <div class="command">
+      <strong>ls [-la]</strong><br />
+      list directory (show permissions and hidden files) <br /></div>
+
+    <div class="command">
+      <strong>cd [directory]</strong><br />
+      change directory<br />
+      cd ..    move 1 directory up<br />
+      cd /     move to the root directory<br />
+      cd ~     move to current user’s home directory<br /></div>
+
+    <div class="command">
+      <strong>mkdir [name]</strong><br />
+      creates a new directory<br /></div>
+
+    <div class="command">
+      <strong>rm [name]</strong><br />
+      removes a file<br />
+      rm -r [name]    removes a directory<br /></div>
+
+    <div class="command">
+      <strong>touch [name]</strong><br />
+      create a file<br /></div>
+
+    <div class="command">
+      <strong>mv [filename] [full path of new location] </strong><br />
+      move a file or directory<br />
+      mv [filename] [new name]    used to rename a file or folder<br /></div>
+
+    <div class="command">
+      <strong>cp [filename] [full path of new location]</strong><br />
+      copy a file or directory to a new location<br />
+      cp -r [filename] [full path of new location]    used to copy a directory</div>
+
+    <div class="command">
+      <strong>cat [file1] [file2] [file…]</strong><br />
+      displays file’s content, can display multiple files in 1 output<br />
+      cat [file1] [file2] > [file3]    combine multiple files<br /></div>
+
+    <div class="command">
+      <strong>echo [text]</strong><br />
+      display text on screen<br />
+      echo [text] >[file]    add text to a file<br /></div>
+    
+    <div class="command">
+      <strong>clear</strong><br />
+      clear the terminal screen<br /></div>
+
+    <div class="commandtitle"><h2> File and Directory Permissions</h2></div> 
+    <div class="command">
+      permissions are a line of characters that look like this: -rwx-r–r– <br />
+      <strong>first character in the line</strong><br />
+      -    means file<br />
+      d    means directory<br />
+      rest of characters<br />
+      r    readable <br />
+      w    write permissions to the file<br />
+      x    execute the file<br />
+      the permissions are in groups of 3 which represent the owner/root, group, and others<br />
+      <strong>setting permissions</strong> 
+      chmod - change mode and permissions<br />
+      ugo = user, group, and others<br />
+      ex: chmod u=rwx [file]<br />
+      ex: chmod g-w [file]<br />
+      octal mode<br />
+      1: x<br />
+      2: w<br />
+      4: r<br />
+      ex: chmod 761 [file]<br />
+      <strong>notes</strong><br />
+      only the owner of the file and root are allowed to change permissions<br />
+      write permissions are needed to create files or directories in a directory<br /></div>
+
+    <div class="commandtitle"><h2> File and Directory Ownership</h2></div>
+    <strong>note: the following commands need root permissions to run</strong>
+    <div class="command">
+      <strong>chown [new owner] [file/folder]</strong><br />
+      change ownership of a file or folder<br /></div>
+      
+    <div class="command">
+      <strong>chgrp [new group] [username]</strong><br />
+      change group ownership<br /></div>
+        
+    <div class="command">
+      <strong>su [username]</strong><br />
+      change to another user account <br />
+      (need that user’s password) <br /></div>
+
+    <div class="commandtitle"><h2>Linux user privileges</h2></div> 
+    <div class="command">
+      <strong>useradd</strong><br />
+      <u>switches</u>
+
+      </div>
+      
+      
+    <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
+    <div class="command">
+      <strong>whoami</strong><br />
+      displays the name of the current user<br /></div>
+
+    <div class="command">
+      <strong>hostname</strong><br />
+      displays name of current workstation<br />
+      sudo nano /etc/hostname     lets you change the hostname<br /></div>
+
+    <div class="command">
+      <strong>id</strong><br />
+      displays the user and group names and ids<br /></div>
+
+    <div class="command">
+      <strong>group</strong><br />
+      lists groups the current user is in<br /></div>
+
+    <div class="command">
+      <strong>lsb_release -a</strong><br />
+      print information about the linux distribution of the system<br /></div>   
+    
+    <div class="command">
+      <strong>lscpu</strong><br />
+      gives information on the cpu<br /></div>
+
+
+    <div class="command">
+      <strong>lscpu</strong><br />
+      gives information on the cpu<br /></div>
+
+    <div class="commandtitle"><h2> View File Content</h2></div>
+      <div class="command">
+        <strong>cat [file]</strong><br />
+        outputs the full file content from first to last line into console<br /></div>
+      <div class="command">
+        <strong>tac [file]</strong>
+        outputs the full file content from last line to first line<br /></div>
+      <div class="command">
+        <strong>tail -n [num] [file] </strong><br />
+        outputs the last [num] lines of a file<br /></div>
+    <div class="command">
+        <strong>head -n [num] [file] </strong><br />
+        outputs the first [num] lines of a file<br /></div>
+    <div class="command">
+      <strong>less [file]</strong>
+      lists the contents of the file fit to console screen <br />
+      use arrow keys to move around <br />
+      <u>navigation in less</u><br />
+      /[term]<br />
+      -i: ignore case <br />
+      n: next instance <br />
+      shift+n <br />
+      q: quit out of less <br />
+    </div>
+
+    <div class="commandtitle"><h2> Manipulate File Content</h2></div>
+      <div class="command">
+        <strong>uniq [file]</strong><br />
+        removes all duplicate <U> adjacent</u> lines<br /></div>
+      <div class="command">
+        <strong>sort [file]</strong>
+        sorts all lines numeric-alphabetically<br />
+        could be used with uniq to filter out all duplicate lines<br /></div>
+      <div class="command">
+        <strong>diff [file1] [file2]</strong><br />
+        displays differences between files<br />
+        <u>switches:</u><br />
+        -C: gives more lines for context <br />
+        -y: displays 2 files side by side, differences are marked with a pipe symbol (|) <br />
+       
+  
+
+    </div>
+  </div>
+</body>
+</html>

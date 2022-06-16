@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Essential Commands Examples</title>
+</head>
+
+<body class="theme">
+  <h1>&emsp;Essential Commands Examples</h1>
+  <h2>&emsp;Connecting to example server</h2>
+  <body>&emsp;There is a dedicated aws linux server with examples to practice with.
+    <br />&emsp;Below are walkthroughs of how to use all the linux commands. <br />
+    <br />
+    &emsp;First in order to connect to the linux server, you have to sign in with ssh. <br />
+    <br />&emsp;copy and paste this command in your linux machine: <br />
+    &emsp;&emsp;&emsp; sudo ssh user@18.219.3.118 <br />
+    &emsp;&emsp;&emsp; when it asks you for a password type user<br />
+    <br />
+    &emsp;If you are signing on from a windows device you need to download putty. <br />
+    &emsp;Just put in the ip and then hit open. It will prompt you for the username (user) and password (user).</body>
+  <h2> &emsp;formatting notes</h2>
+  &emsp;(cmd) will be used to indicate the following text is the exact command inputed into the console.<br />
+  &emsp;all examples assume you are starting in the default /home/user directory (which you will be in after using ssh to sign in.)
+    <div class="app_container">
+    <div class="commandtitle"><h2> File Navigation and Management </h2> </div>
+    <div class="command">  
+      <strong>pwd</strong><br />
+      This will tell you the full path of the directory you are currently in. <br />
+      <br />
+      example: <br />
+      [cmd] pwd<br /> &emsp;&emsp; I listed the directory I am currently in which is the default directory after you ssh into the server. <br />
+      output:<br />
+      &emsp;&emsp;<img src="assets/pics/pwd.png" /></div>
+
+    <div class="command">
+      <strong>ls [-la]</strong><br />
+      This will list all files including hidden files (files that start with a dot(.)) and give the permissions of each file <br />
+      <br />
+      example: <br />
+      &emsp; [cmd] ls <br /> &emsp;&emsp;will list all files in the current directory (folder) unless it is hidden. <br />
+      &emsp; [cmd] ls -la  <br /> &emsp;&emsp;will list all files in the current directory including hidden files. In addition it will also display the file permissions for each file. <br />
+      &emsp; [cmd] ls -l <br /> &emsp;&emsp;this command performs the functions of the ls [cmd] and also list permissions of the files (because of the -l switch) <br />
+      &emsp; [cmd] ls -a <br /> &emsp;&emsp; stuff <br />
+      
+      output:<br />
+      &emsp;&emsp;<img src="assets/pics/ls.png"/> <br /></div>
+
+    <div class="command">
+      <strong>cd [directory]</strong><br />
+      <br />
+      move a single directory higher <br />
+      [cmd] cd .. <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/cd1.png"/><br />
+      <br />
+      Move to the root directory, the highest level directory which contains all other directories and files in linux.<br />
+      Note: This is not the root user's directory <br />
+      [cmd] cd / <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/cd2.png"/><br />
+      Move to the home directory of the user who entered the command. <br /> 
+      In this case it will the user directory. <br />
+      [cmd] cd ~ <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/cd3.png"/><br />
+    </div>
+
+    <div class="command">
+      <strong>mkdir [name]</strong><br />
+      creates a new directory<br />
+      example: <br />
+      [cmd] mkdir direc <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/mkdir.png" /></div>
+
+    <div class="command">
+      <strong>rm [name]</strong><br />
+      The file will be permanantly removed. It is not like moving a file to the trash can on Windows. <br />
+      However it is possible to recover the file with forensic data recovery software. <br />
+      example: <br />
+      [cmd] rm file.txt
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/rm.png" /></div>
+
+    <div class="command">
+      <strong>touch [name]</strong><br />
+      create a empty text file<br />
+      example: <br />
+      [cmd] touch file_t.txt <br />
+      output: <br /></div>
+
+    <div class="command">
+      <strong>mv [filename] [full path of new location] </strong><br />
+      This command can be used to move a file/directory to another directory or rename a file/directory. <br />
+      [cmd] mv file2.txt  file3.txt<br />
+      output: <br />
+    
+    </div>
+
+    <div class="command">
+      <strong>cp [filename] [full path of new location]</strong><br />
+      Copy a file or directory to a new location. It can be in the present directory or any other directory.<br />
+      cp -r [filename] [full path of new location]    used to copy a directory</div>
+
+    <div class="command">
+      <strong>cat [file1] [file2] [file…]</strong><br />
+      displays file’s content, can display multiple files in 1 output<br />
+      cat [file1] [file2] > [file3]    combine multiple files<br /></div>
+
+    <div class="command">
+      <strong>echo [text]</strong><br />
+      redirect the specified line of text somewhere. It can be the terminal or a file.<br />
+      example:  <br />
+      [cmd] echo "this line will show up in terminal"   <br />
+      output: <br />
+      [cmd] echo "this line will show up in the file" <br />
+      output: <br />
+      </div>
+    
+    <div class="command">
+      <strong>clear</strong><br />
+      clear the terminal screen<br />
+      example: <br />
+      [cmd] clear <br />
+      output: <br />
+    </div>
+      
+
+    <div class="commandtitle"><h2> File and Directory Permissions</h2></div> 
+    <div class="command">
+      permissions are a line of characters that look like this: -rwx-r–r– <br />
+      <strong>first character in the line</strong><br />
+      -    means file<br />
+      d    means directory<br />
+      rest of characters<br />
+      r    readable <br />
+      w    write permissions to the file<br />
+      x    execute the file<br />
+      the permissions are in groups of 3 which represent the owner/root, group, and others<br />
+      <strong>setting permissions</strong> 
+      chmod - change mode and permissions<br />
+      ugo = user, group, and others<br />
+      ex: chmod u=rwx [file]<br />
+      ex: chmod g-w [file]<br />
+      octal mode<br />
+      1: x<br />
+      2: w<br />
+      4: r<br />
+      ex: chmod 761 [file]<br />
+      <strong>notes</strong><br />
+      only the owner of the file and root are allowed to change permissions<br />
+      write permissions are needed to create files or directories in a directory<br /></div>
+
+    <div class="commandtitle"><h2> File and Directory Ownership</h2></div>
+    <strong>note: the following commands need root permissions to run</strong>
+    <div class="command">
+      <strong>chown [new owner] [file/folder]</strong><br />
+      change ownership of a file or folder<br /></div>
+      
+    <div class="command">
+      <strong>chgrp [new group] [username]</strong><br />
+      change group ownership<br /></div>
+        
+    <div class="command">
+      <strong>su [username]</strong><br />
+      change to another user account <br />
+      (need that user’s password) <br /></div>
+
+    <div class="commandtitle"><h2>Linux user privileges</h2></div> 
+    <div class="command">
+      <strong>useradd</strong><br />
+      <u>switches</u>
+
+      </div>
+      
+      
+    <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
+    <div class="command">
+      <strong>whoami</strong><br />
+      displays the name of the current user<br /></div>
+
+    <div class="command">
+      <strong>hostname</strong><br />
+      displays name of current workstation<br />
+      sudo nano /etc/hostname     lets you change the hostname<br /></div>
+
+    <div class="command">
+      <strong>id</strong><br />
+      displays the user and group names and ids<br /></div>
+
+    <div class="command">
+      <strong>group</strong><br />
+      lists groups the current user is in<br /></div>
+
+    <div class="command">
+      <strong>lsb_release -a</strong><br />
+      print information about the linux distribution of the system<br /></div>   
+    
+    <div class="command">
+      <strong>lscpu</strong><br />
+      gives information on the cpu<br /></div>
+
+
+    <div class="command">
+      <strong>lscpu</strong><br />
+      gives information on the cpu<br /></div>
+
+    <div class="commandtitle"><h2> View File Content</h2></div>
+      <div class="command">
+        <strong>cat [file]</strong><br />
+        outputs the full file content from first to last line into console<br /></div>
+      <div class="command">
+        <strong>tac [file]</strong>
+        outputs the full file content from last line to first line<br /></div>
+      <div class="command">
+        <strong>tail -n [num] [file] </strong><br />
+        outputs the last [num] lines of a file<br /></div>
+    <div class="command">
+        <strong>head -n [num] [file] </strong><br />
+        outputs the first [num] lines of a file<br /></div>
+    <div class="command">
+      <strong>less [file]</strong>
+      lists the contents of the file fit to console screen <br />
+      use arrow keys to move around <br />
+      <u>navigation in less</u><br />
+      /[term]<br />
+      -i: ignore case <br />
+      n: next instance <br />
+      shift+n <br />
+      q: quit out of less <br />
+    </div>
+
+    <div class="commandtitle"><h2> Manipulate File Content</h2></div>
+      <div class="command">
+        <strong>uniq [file]</strong><br />
+        removes all duplicate <U> adjacent</u> lines<br /></div>
+      <div class="command">
+        <strong>sort [file]</strong>
+        sorts all lines numeric-alphabetically<br />
+        could be used with uniq to filter out all duplicate lines<br /></div>
+      <div class="command">
+        <strong>diff [file1] [file2]</strong><br />
+        displays differences between files<br />
+        <u>switches:</u><br />
+        -C: gives more lines for context <br />
+        -y: displays 2 files side by side, differences are marked with a pipe symbol (|) <br />
+       
+  
+
+    </div>
+  </div>
+</body>
+</html>
