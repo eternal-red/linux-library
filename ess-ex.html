@@ -9,21 +9,21 @@
 </head>
 
 <body class="theme">
-  <h1>&emsp;Essential Commands Examples</h1>
+  <h1>Essential Commands Examples</h1>
   <h2>&emsp;Connecting to example server</h2>
   <body>&emsp;There is a dedicated aws linux server with examples to practice with.
     <br />&emsp;Below are walkthroughs of how to use all the linux commands. <br />
     <br />
-    &emsp;First in order to connect to the linux server, you have to sign in with ssh. <br />
-    <br />&emsp;copy and paste this command in your linux machine: <br />
+    ---First in order to connect to the linux server, you have to sign in with ssh. <br />
+    &emsp;Copy and paste this command in your linux machine: <br />
     &emsp;&emsp;&emsp; sudo ssh user@18.219.3.118 <br />
-    &emsp;&emsp;&emsp; when it asks you for a password type user<br />
+    &emsp;&emsp;&emsp; when it asks you for a password type <b>user</b> <br />
     <br />
-    &emsp;If you are signing on from a windows device you need to download putty. <br />
+    ---If you are signing on from a windows device you need to download putty. <br />
     &emsp;Just put in the ip and then hit open. It will prompt you for the username (user) and password (user).</body>
   <h2> &emsp;formatting notes</h2>
   &emsp;(cmd) will be used to indicate the following text is the exact command inputed into the console.<br />
-  &emsp;all examples assume you are starting in the default /home/user directory (which you will be in after using ssh to sign in.)
+  &emsp;All examples assume you are starting in the default /home/user directory (which you will be in after using ssh to sign in.<br />
     <div class="app_container">
     <div class="commandtitle"><h2> File Navigation and Management </h2> </div>
     <div class="command">  
@@ -42,27 +42,28 @@
       example: <br />
       &emsp; [cmd] ls <br /> &emsp;&emsp;will list all files in the current directory (folder) unless it is hidden. <br />
       &emsp; [cmd] ls -la  <br /> &emsp;&emsp;will list all files in the current directory including hidden files. In addition it will also display the file permissions for each file. <br />
-      &emsp; [cmd] ls -l <br /> &emsp;&emsp;this command performs the functions of the ls [cmd] and also list permissions of the files (because of the -l switch) <br />
-      &emsp; [cmd] ls -a <br /> &emsp;&emsp; stuff <br />
-      
+      &emsp; [cmd] ls -l <br /> &emsp;&emsp;This command performs the functions of the ls [cmd] and also lists permissions of the files (because of the -l switch) <br />
+      &emsp; [cmd] ls -a <br /> &emsp;&emsp; This command performs the functions of the ls [cmd] and also lists all hidden files in the current directory (because of the -a switch) <br />
       output:<br />
       &emsp;&emsp;<img src="assets/pics/ls.png"/> <br /></div>
 
     <div class="command">
       <strong>cd [directory]</strong><br />
       <br />
-      move a single directory higher <br />
+      First I listed the directory I am currently in which is the /home/user directory (using the pwd command). Then I move a single directory higher with [cmd] cd .. <br />
+      As you can see, we are now in the /home directory which contains the user directory and is one level higher. <br />
       [cmd] cd .. <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/cd1.png"/><br />
       <br />
-      Move to the root directory, the highest level directory which contains all other directories and files in linux.<br />
+      First I listed the directory I am currently in which is the /home/user directory. Then I moved to the root directory, the highest level directory which contains all other directories and files in linux.<br />
+      I then used [cmd] pwd to list the directory I am in and confirm I am in the root directory (/). <br />
       Note: This is not the root user's directory <br />
       [cmd] cd / <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/cd2.png"/><br />
-      Move to the home directory of the user who entered the command. <br /> 
-      In this case it will the user directory. <br />
+      First I listed the directory I am currently in which is the root directory (/). Now I moved to the home directory of the user who entered the command. <br /> 
+      Since I am currently the user "user", I will move to the /home/user directory (as confirmed with [cmd] pwd). <br />
       [cmd] cd ~ <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/cd3.png"/><br />
@@ -90,15 +91,15 @@
       create a empty text file<br />
       example: <br />
       [cmd] touch file_t.txt <br />
-      output: <br /></div>
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/touch.png" /></div>
 
     <div class="command">
       <strong>mv [filename] [full path of new location] </strong><br />
       This command can be used to move a file/directory to another directory or rename a file/directory. <br />
       [cmd] mv file2.txt  file3.txt<br />
       output: <br />
-    
-    </div>
+      &emsp;&emsp;<img src="assets/pics/mv.png" /></div>
 
     <div class="command">
       <strong>cp [filename] [full path of new location]</strong><br />
