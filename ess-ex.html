@@ -100,13 +100,23 @@
     <div class="command">
       <strong>cp [filename] [full path of new location]</strong><br />
       Copy a file or directory to a new location. It can be in the present directory or any other directory.<br />
-      cp -r [filename] [full path of new location]    used to copy a directory</div>
+      example: <br />
+      First we list the contents of file.txt [cmd] cat file.txt. Then we copy it to the home directory [cmd] cp file.txt /home/. Now we move into the home directory [cmd] pwd and check confirm the content is the same [cmd] cat file.txt. <br />
+      [cmd] cp file.txt /home/ <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/cp.png" /></div>
 
     <div class="command">
       <strong>cat [file1] [file2] [file…]</strong><br />
+      examples: <br />
       <b>display the content of a file</b>
+      [cmd] cat file.txt <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/cat2.png" /> 
+
       <b>combine the content of two or more files</b>
-      cat [file1] [file2] > [file3]    combine multiple files<br /></div>
+      I first show the contents of file.txt and file2.txt. Then I combine them together in a new file (file3.txt) and show the resulting content<br />
+      &emsp;&emsp;<img src="assets/pics/cat3.png" /></div>
 
     <div class="command">
       <strong>echo [text]</strong><br />
@@ -129,11 +139,11 @@
       Since the content is the same, all we have done is rename file2.txt to file3.txt. <br />
       [cmd] mv file2.txt  file3.txt<br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/mv.png" /><br />
+      &emsp;&emsp;<img src="assets/pics/mv1.png" /><br />
       <b>We will move a file to another directory</b>
-      First we do [cmd] cat file2.txt to show its contents. Then we do [cmd] mv file2.txt /home/examples/file2.txt to move it to another directory. Now we go into that directory to confirm it is there. <br />
+      First we do [cmd] cat file2.txt to show its contents. Then we do [cmd] mv file2.txt /home/example/file2.txt to move it to another directory. Now we go into that directory to confirm it is there. <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/mv.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/mv2.png" /></div>
     
     <div class="command">
       <strong>clear</strong><br />
@@ -171,28 +181,31 @@
       write permissions are needed to create files or directories in a directory<br /></div>
 
     <div class="commandtitle"><h2> File and Directory Ownership</h2></div>
-    <strong>note: the following commands need root permissions to run</strong>
+    <strong>note: the following commands need root permissions to run. <br />
+    You need to append sudo in order for them to work.</strong>
     <div class="command">
       <strong>chown [new owner] [file/folder]</strong><br />
-      change ownership of a file or folder<br /></div>
-      
+      change ownership of a file or folder<br />
+      example: <br />
+      [cmd] sudo chown admin file.txt <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/chown.png" /></div>   
+    
     <div class="command">
       <strong>chgrp [new group] [username]</strong><br />
-      change group ownership<br /></div>
+      change group ownership<br />
+      example: <br />
+      [cmd] sudo chgrp 
+  </div>
         
     <div class="command">
       <strong>su [username]</strong><br />
       change to another user account <br />
-      (need that user’s password) <br /></div>
-
-    <div class="commandtitle"><h2>Linux user privileges</h2></div> 
-    <div class="command">
-      <strong>useradd</strong><br />
-      <u>switches</u>
-
-      </div>
-      
-      
+      example: <br />
+      [cmd] sudo su admin
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/su.png" /></div>   
+  
     <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
     <div class="command">
       <strong>whoami</strong><br />
@@ -205,7 +218,11 @@
     <div class="command">
       <strong>hostname</strong><br />
       displays name of current workstation<br />
-      sudo nano /etc/hostname     lets you change the hostname<br /></div>
+      examples: <br />
+      <b>show hostname</b><br />
+      [cmd] hostname <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/hostname.png" /></div>
 
     <div class="command">
       <strong>id</strong><br />
@@ -217,25 +234,48 @@
 
     <div class="command">
       <strong>lsb_release -a</strong><br />
-      print information about the linux distribution of the system<br /></div>   
+      print information about the linux distribution of the system<br />
+      example: <br />
+      The command tells us the distribution is Debian and the Debian version is 11. <br />
+      [cmd] lsb_release -a <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/lsb.png" /></div>  
     
     <div class="command">
       <strong>lscpu</strong><br />
-      gives information on the cpu<br /></div>
+      gives information on the cpu<br />
+      &emsp;&emsp;<img src="assets/pics/lscpu.png" /></div>
 
     <div class="commandtitle"><h2> View File Content</h2></div>
+    <strong>For these commands we will start in the example directory which is at /home/example.</strong>
       <div class="command">
         <strong>cat [file]</strong><br />
-        outputs the full file content from first to last line into console<br /></div>
+        outputs the full file content from first to last line into console<br />
+        example: <br />
+        [cmd] cat datafile.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/cat.png" /></div>
       <div class="command">
         <strong>tac [file]</strong>
-        outputs the full file content from last line to first line<br /></div>
+        outputs the full file content from last line to first line<br />
+        example: <br />
+        [cmd]  tac datafile.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/tac.png" /></div>
       <div class="command">
         <strong>tail -n [num] [file] </strong><br />
-        outputs the last [num] lines of a file<br /></div>
+        outputs the last [num] lines of a file<br />
+        example: <br />
+        [cmd] tail -5 datafile.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/tail.png" /></div>
     <div class="command">
         <strong>head -n [num] [file] </strong><br />
-        outputs the first [num] lines of a file<br /></div>
+        outputs the first [num] lines of a file<br /> 
+        example: <br />
+        [cmd] head -5 datafile.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/head.png" /></div>
     <div class="command">
       <strong>less [file]</strong>
       lists the contents of the file fit to console screen <br />
@@ -251,11 +291,22 @@
     <div class="commandtitle"><h2> Manipulate File Content</h2></div>
       <div class="command">
         <strong>uniq [file]</strong><br />
-        removes all duplicate <U> adjacent</u> lines<br /></div>
+        removes all duplicate <U> adjacent</u> lines<br />
+        example: <br />
+        The adjacent "line 1", "line 2" and "last line" lines were removed, however unadjacent ones remained. <br />
+        [cmd] uniq datafile.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/uniq.png" /></div>
+      
       <div class="command">
         <strong>sort [file]</strong>
-        sorts all lines numeric-alphabetically<br />
-        could be used with uniq to filter out all duplicate lines<br /></div>
+        sorts all lines alpha-numerically<br />
+        could be used with uniq to filter out all duplicate lines<br />
+        example: <br />
+        We sorted the file alpha-numerically and redirected the output into another file datafile2.txt. If we open it [cmd] cat datafile2.txt we see the sorted output. <br />
+        [cmd] sort datafile.txt > datafile2.txt <br />
+        output: <br />
+        &emsp;&emsp;<img src="assets/pics/sort.png" /></div>
       <div class="command">
         <strong>diff [file1] [file2]</strong><br />
         displays differences between files<br />
@@ -263,7 +314,6 @@
         -C: gives more lines for context <br />
         -y: displays 2 files side by side, differences are marked with a pipe symbol (|) <br />
        
-  
 
     </div>
   </div>
