@@ -24,51 +24,61 @@
 
     <div class="command">
       <strong>ls [-la]</strong><br />
-      list directory (show permissions and hidden files) <br /></div>
+      list directory (show permissions and hidden files) <br />
+    </div>
 
     <div class="command">
       <strong>cd [directory]</strong><br />
       change directory<br />
       cd ..    move 1 directory up<br />
       cd /     move to the root directory<br />
-      cd ~     move to current user’s home directory<br /></div>
+      cd ~     move to current user’s home directory<br />
+    </div>
 
     <div class="command">
       <strong>mkdir [name]</strong><br />
-      creates a new directory<br /></div>
+      creates a new directory<br />
+    </div>
 
     <div class="command">
       <strong>rm [name]</strong><br />
       removes a file<br />
-      rm -r [name]    removes a directory<br /></div>
+      rm -r [name]    removes a directory<br />
+    </div>
 
     <div class="command">
       <strong>touch [name]</strong><br />
-      create a file<br /></div>
+      create a file<br />
+    </div>
 
     <div class="command">
       <strong>mv [filename] [full path of new location] </strong><br />
       move a file or directory<br />
-      mv [filename] [new name]    used to rename a file or folder<br /></div>
+      mv [filename] [new name]    used to rename a file or folder<br />
+    </div>
 
     <div class="command">
       <strong>cp [filename] [full path of new location]</strong><br />
       copy a file or directory to a new location<br />
-      cp -r [filename] [full path of new location]    used to copy a directory</div>
+      cp -r [filename] [full path of new location]    used to copy a directory
+    </div>
 
     <div class="command">
       <strong>cat [file1] [file2] [file…]</strong><br />
       displays file’s content, can display multiple files in 1 output<br />
-      cat [file1] [file2] > [file3]    combine multiple files<br /></div>
+      cat [file1] [file2] > [file3]    combine multiple files<br />
+    </div>
 
     <div class="command">
       <strong>echo [text]</strong><br />
       display text on screen<br />
-      echo [text] >[file]    add text to a file<br /></div>
+      echo [text] >[file]    add text to a file<br />
+    </div>
     
     <div class="command">
       <strong>clear</strong><br />
-      clear the terminal screen<br /></div>
+      clear the terminal screen<br />
+    </div>
 
     <div class="commandtitle"><h2> File and Directory Permissions</h2></div> 
     <div class="command">
@@ -93,40 +103,48 @@
       ex: chmod 761 [file]<br />
       <strong>notes</strong><br />
       only the owner of the file and root are allowed to change permissions<br />
-      write permissions are needed to create files or directories in a directory<br /></div>
+      write permissions are needed to create files or directories in a directory<br />
+    </div>
 
     <div class="commandtitle"><h2> File and Directory Ownership</h2></div>
     <strong>note: the following commands need root permissions to run</strong>
     <div class="command">
       <strong>chown [new owner] [file/folder]</strong><br />
-      change ownership of a file or folder<br /></div>
+      change ownership of a file or folder<br />
+    </div>
 
     <div class="command">
       <strong>su [username]</strong><br />
       change to another user account <br />
-      (need that user’s password) <br /></div>
+      (need that user’s password) <br />
+    </div>
  
     <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
     <div class="command">
       <strong>whoami</strong><br />
-      displays the name of the current user<br /></div>
+      displays the name of the current user<br />
+    </div>
 
     <div class="command">
       <strong>hostname</strong><br />
       displays name of current workstation<br />
-      sudo nano /etc/hostname     lets you change the hostname<br /></div>
+      sudo nano /etc/hostname     lets you change the hostname<br />
+    </div>
 
     <div class="command">
       <strong>id</strong><br />
-      displays the user and group names and ids<br /></div>
+      displays the user and group names and ids<br />
+    </div>
 
     <div class="command">
       <strong>group</strong><br />
-      lists groups the current user is in<br /></div>
+      lists groups the current user is in<br />
+    </div>
 
     <div class="command">
       <strong>lsb_release -a</strong><br />
-      print information about the linux distribution of the system<br /></div>   
+      print information about the linux distribution of the system<br />
+    </div>   
     
     <div class="command">
       <strong>lscpu</strong><br />
@@ -164,17 +182,8 @@
       <div class="command">
         <strong>sort [file]</strong>
         sorts all lines alpha-numerically<br />
-        could be used with uniq to filter out all duplicate lines<br /></div>
-      <div class="command">
-        <strong>diff [file1] [file2]</strong><br />
-        displays differences between files<br />
-        <u>switches:</u><br />
-        -C: gives more lines for context <br />
-        -y: displays 2 files side by side, differences are marked with a pipe symbol (|) <br />
-       
-  
-
-    </div>
+        could be used with uniq to filter out all duplicate lines<br />
+      </div>
   </div>
 </body>
 </html>

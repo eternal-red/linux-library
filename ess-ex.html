@@ -33,7 +33,8 @@
       example: <br />
       [cmd] pwd<br /> &emsp;&emsp; I listed the directory I am currently in which is the default directory after you ssh into the server. <br />
       output:<br />
-      &emsp;&emsp;<img src="assets/pics/pwd.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/pwd.png" />
+    </div>
 
     <div class="command">
       <strong>ls [-la]</strong><br />
@@ -45,7 +46,8 @@
       &emsp; [cmd] ls -l <br /> &emsp;&emsp;This command performs the functions of the ls [cmd] and also lists permissions of the files (because of the -l switch) <br />
       &emsp; [cmd] ls -a <br /> &emsp;&emsp; This command performs the functions of the ls [cmd] and also lists all hidden files in the current directory (because of the -a switch) <br />
       output:<br />
-      &emsp;&emsp;<img src="assets/pics/ls.png"/> <br /></div>
+      &emsp;&emsp;<img src="assets/pics/ls.png"/> <br />
+    </div>
 
     <div class="command">
       <strong>cd [directory]</strong><br />
@@ -76,7 +78,8 @@
       example: <br />
       [cmd] mkdir direc <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/mkdir.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/mkdir.png" />
+    </div>
 
     <div class="command">
       <strong>rm [name]</strong><br />
@@ -86,7 +89,8 @@
       First, I listed the contents of our directory with [cmd] ls which are file.txt and file2.txt. Then I used [cmd] rm file.txt to permanatly delete file.txt from the server. Using [cmd] ls again we can see file.txt is gone.<br />
       [cmd] rm file.txt
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/rm.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/rm.png" />
+    </div>
 
     <div class="command">
       <strong>touch [name]</strong><br />
@@ -95,7 +99,8 @@
       Using [cmd] ls -la we list all contents that are currently in the directory. Then we use [cmd] touch file_t.txt to create an empty text file called file_t.txt. We use [cmd] ls -la once again to confirm the creation of this file. <br />
       [cmd] touch file_t.txt <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/touch.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/touch.png" />
+    </div>
 
     <div class="command">
       <strong>cp [filename] [full path of new location]</strong><br />
@@ -104,7 +109,8 @@
       First we list the contents of file.txt [cmd] cat file.txt. Then we copy it to the home directory [cmd] cp file.txt /home/example/ . Now we move into the home directory [cmd] pwd and check confirm the content is the same [cmd] cat file.txt. <br />
       [cmd] cp file.txt /home/example/ <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/cp.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/cp.png" />
+    </div>
 
     <div class="command">
       <strong>cat [file1] [file2] [file…]</strong><br />
@@ -116,7 +122,8 @@
 
       <b>combine the content of two or more files</b>
       I first show the contents of file.txt and file2.txt. Then I combine them together in a new file (file3.txt) and show the resulting content<br />
-      &emsp;&emsp;<img src="assets/pics/cat3.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/cat3.png" />
+    </div>
 
     <div class="command">
       <strong>echo [text]</strong><br />
@@ -128,7 +135,8 @@
       We first open file2 to show its contents [cmd] file2.txt. Now we add our string to it [cmd] echo "this line will show up in the file">>file2.txt <br />
       [cmd] echo "this line will show up in the file" >>file2.txt <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/echo_file.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/echo_file.png" />
+    </div>
 
     <div class="command">
       <strong>mv [filename] [full path of new location] </strong><br />
@@ -143,7 +151,8 @@
       <b>We will move a file to another directory</b>
       First we do [cmd] cat file2.txt to show its contents. Then we do [cmd] mv file2.txt /home/example/file2.txt to move it to another directory. Now we go into that directory to confirm it is there. <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/mv2.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/mv2.png" />
+    </div>
     
     <div class="command">
       <strong>clear</strong><br />
@@ -153,32 +162,34 @@
       [cmd] clear <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/b_clear.png" />
-      &emsp;&emsp;<img src="assets/pics/a_clear.png" /></div>      
+      &emsp;&emsp;<img src="assets/pics/a_clear.png" />
+    </div>      
 
     <div class="commandtitle"><h2> File and Directory Permissions</h2></div> 
     <div class="command">
       permissions are a line of characters that look like this: -rwx-r–r– <br />
-      <strong>first character in the line</strong><br />
-      -    means file<br />
-      d    means directory<br />
-      rest of characters<br />
-      r    readable <br />
-      w    write permissions to the file<br />
-      x    execute the file<br />
-      the permissions are in groups of 3 which represent the owner/root, group, and others<br />
-      <strong>setting permissions</strong> 
-      chmod - change mode and permissions<br />
-      ugo = user, group, and others<br />
-      ex: chmod u=rwx [file]<br />
-      ex: chmod g-w [file]<br />
-      octal mode<br />
-      1: x<br />
-      2: w<br />
-      4: r<br />
-      ex: chmod 761 [file]<br />
-      <strong>notes</strong><br />
-      only the owner of the file and root are allowed to change permissions<br />
-      write permissions are needed to create files or directories in a directory<br /></div>
+      you can find the permissions for a file or directory using [cmd] ls -l <br />
+      <strong>understanding permissions</strong><br />
+      examples: <br />
+      The - at the beggining of the line signals that file.txt is indeed a file. <br />
+      This file has read and write permissions for the user, read permissions for the group, and read permissions for anyone else. <br />
+      [cmd] ls -l file.txt <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/perms1.png" />
+      <strong>chmod - change mode and permissions</strong>
+      octal values are another way to represent privledges without using the letters string. <br />
+      The octal values for each privledge are: <br />
+      1: x (execute)<br />
+      2: w (write)<br />
+      4: r (read)<br />
+      In order to represent a permission with multiple privledges we add the numbers. <br />
+      examples: <br />
+      The octal value of file.txt is 644 because the user permission has both read and write so 4+2=6. <br />
+      If we wanted to change the permissions so everyone could read and write, we would use 666. After using the command we can see with [cmd] ls -l file.txt that everyone has read and write permissions. <br />
+      [cmd] sudo chmod 666 file.txt <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/perms2.png" />
+    </div>
 
     <div class="commandtitle"><h2> File and Directory Ownership</h2></div>
     <strong>note: the following commands need root permissions to run. <br />
@@ -189,7 +200,8 @@
       example: <br />
       [cmd] sudo chown admin file.txt <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/chown.png" /></div>   
+      &emsp;&emsp;<img src="assets/pics/chown.png" />
+    </div>   
     
     <div class="command">
       <strong>chgrp [new group] [file name]</strong><br />
@@ -198,7 +210,8 @@
       The group that is this file is set to is currently the "root" group. We change it into the "mygroup" group. <br />
       [cmd] sudo chgrp mygrouup file.txt <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/chgrp.png" /></div>   
+      &emsp;&emsp;<img src="assets/pics/chgrp.png" />
+    </div>   
         
     <div class="command">
       <strong>su [username]</strong><br />
@@ -206,7 +219,8 @@
       example: <br />
       [cmd] sudo su admin
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/su.png" /></div>   
+      &emsp;&emsp;<img src="assets/pics/su.png" />
+    </div>   
   
     <div class="commandtitle"><h2>Distribution and System Info</h2></div> 
     <div class="command">
@@ -215,7 +229,8 @@
       example: <br />
       [cmd] whoami <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/whoami.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/whoami.png" />
+    </div>
 
     <div class="command">
       <strong>hostname</strong><br />
@@ -224,7 +239,8 @@
       <b>show hostname</b><br />
       [cmd] hostname <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/hostname.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/hostname.png" />
+    </div>
 
     <div class="command">
       <strong>id</strong><br />
@@ -232,7 +248,8 @@
       example: <br />
       [cmd] id <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/id.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/id.png" />
+    </div>
 
     <div class="command">
       <strong>lsb_release -a</strong><br />
@@ -241,12 +258,14 @@
       The command tells us the distribution is Debian and the Debian version is 11. <br />
       [cmd] lsb_release -a <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/lsb.png" /></div>  
+      &emsp;&emsp;<img src="assets/pics/lsb.png" />
+    </div>  
     
     <div class="command">
       <strong>lscpu</strong><br />
       gives information on the cpu<br />
-      &emsp;&emsp;<img src="assets/pics/lscpu.png" /></div>
+      &emsp;&emsp;<img src="assets/pics/lscpu.png" />
+    </div>
 
     <div class="commandtitle"><h2> View File Content</h2></div>
     <strong>For these commands we will start in the example directory which is at /home/example.</strong>
@@ -270,14 +289,16 @@
         example: <br />
         [cmd] tail -5 datafile.txt <br />
         output: <br />
-        &emsp;&emsp;<img src="assets/pics/tail.png" /></div>
+        &emsp;&emsp;<img src="assets/pics/tail.png" />
+      </div>
     <div class="command">
         <strong>head -n [num] [file] </strong><br />
         outputs the first [num] lines of a file<br /> 
         example: <br />
         [cmd] head -5 datafile.txt <br />
         output: <br />
-        &emsp;&emsp;<img src="assets/pics/head.png" /></div>
+        &emsp;&emsp;<img src="assets/pics/head.png" />
+      </div>
     <div class="command">
       <strong>less [file]</strong>
       lists the contents of the file fit to console screen <br />
@@ -288,7 +309,8 @@
       We want to find all occurences of admin, this command will highlight them all. <br />
       [cmd] /admin <br />
       output: <br />
-      &emsp;&emsp;<img src="assets/pics/less_a.png" /> </div>
+      &emsp;&emsp;<img src="assets/pics/less_a.png" /> 
+    </div>
 
     <div class="commandtitle"><h2> Manipulate File Content</h2></div>
       <div class="command">
@@ -298,7 +320,8 @@
         The adjacent "line 1", "line 2" and "last line" lines were removed, however unadjacent ones remained. <br />
         [cmd] uniq datafile.txt <br />
         output: <br />
-        &emsp;&emsp;<img src="assets/pics/uniq.png" /></div>
+        &emsp;&emsp;<img src="assets/pics/uniq.png" />
+      </div>
       
       <div class="command">
         <strong>sort [file]</strong>
@@ -308,16 +331,8 @@
         We sorted the file alpha-numerically and redirected the output into another file datafile2.txt. If we open it [cmd] cat datafile2.txt we see the sorted output. <br />
         [cmd] sort datafile.txt > datafile2.txt <br />
         output: <br />
-        &emsp;&emsp;<img src="assets/pics/sort.png" /></div>
-      <div class="command">
-        <strong>diff [file1] [file2]</strong><br />
-        displays differences between files<br />
-        <u>switches:</u><br />
-        -C: gives more lines for context <br />
-        -y: displays 2 files side by side, differences are marked with a pipe symbol (|) <br />
-       
-
-    </div>
+        &emsp;&emsp;<img src="assets/pics/sort.png" />
+      </div>
   </div>
 </body>
 </html>

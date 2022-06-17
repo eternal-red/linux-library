@@ -37,24 +37,18 @@
     <div class="command">
         <strong>systemctl isolate [target boot]</strong><br />
         temporarily use another boot target<br /></div>
-    <div class="command">
-        <strong> asdf</strong><br />
-        asdf<br />
-    </div>
-
-    <div class="command">
-        <strong> asdf</strong><br />
-        asdf <br />
-
-    <div c;ass="command">
-        <strong> asdf </strong><br />
-        asdf <br />
-    </div>
-    </div>
-       
-  
-
-    </div>
+    <div class="commandtitle"><h2>Startup Processes</h2> </div>
+        <div class="command">
+        <strong> systemctl</strong><br />
+        can managae and configure services<br />
+        <br />
+        systemctl start [service file]        starts the service immediately <br/>
+        systemctl stop [service file]         gracefully quits out of the service immediately <br />
+        systemctl status [service file]       see if the service is currently running and if it is configured to run when the computer starts up. <br />
+        systemctl enable [service file]       enable the service to run on startup <br/>
+        systemctl disable [service file]      disable the service from running on startup <br />
+        systemctl revert [service file]       revert the configuration of the service file to default factory settings <br />
+      </div>
   </div>
 </body>
 </html>
