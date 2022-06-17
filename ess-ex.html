@@ -101,8 +101,8 @@
       <strong>cp [filename] [full path of new location]</strong><br />
       Copy a file or directory to a new location. It can be in the present directory or any other directory.<br />
       example: <br />
-      First we list the contents of file.txt [cmd] cat file.txt. Then we copy it to the home directory [cmd] cp file.txt /home/. Now we move into the home directory [cmd] pwd and check confirm the content is the same [cmd] cat file.txt. <br />
-      [cmd] cp file.txt /home/ <br />
+      First we list the contents of file.txt [cmd] cat file.txt. Then we copy it to the home directory [cmd] cp file.txt /home/example/ . Now we move into the home directory [cmd] pwd and check confirm the content is the same [cmd] cat file.txt. <br />
+      [cmd] cp file.txt /home/example/ <br />
       output: <br />
       &emsp;&emsp;<img src="assets/pics/cp.png" /></div>
 
@@ -192,11 +192,13 @@
       &emsp;&emsp;<img src="assets/pics/chown.png" /></div>   
     
     <div class="command">
-      <strong>chgrp [new group] [username]</strong><br />
+      <strong>chgrp [new group] [file name]</strong><br />
       change group ownership<br />
       example: <br />
-      [cmd] sudo chgrp 
-  </div>
+      The group that is this file is set to is currently the "root" group. We change it into the "mygroup" group. <br />
+      [cmd] sudo chgrp mygrouup file.txt <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/chgrp.png" /></div>   
         
     <div class="command">
       <strong>su [username]</strong><br />
@@ -280,13 +282,13 @@
       <strong>less [file]</strong>
       lists the contents of the file fit to console screen <br />
       use arrow keys to move around <br />
-      <u>navigation in less</u><br />
-      /[term]<br />
-      -i: ignore case <br />
-      n: next instance <br />
-      shift+n <br />
-      q: quit out of less <br />
-    </div>
+      examples: <br />
+      First open up less, all navigation commands are done within less. <br />
+      [cmd] less auth.log <br />
+      We want to find all occurences of admin, this command will highlight them all. <br />
+      [cmd] /admin <br />
+      output: <br />
+      &emsp;&emsp;<img src="assets/pics/less_a.png" /> </div>
 
     <div class="commandtitle"><h2> Manipulate File Content</h2></div>
       <div class="command">
